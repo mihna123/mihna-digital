@@ -1,0 +1,45 @@
+/* content font 
+.sofia-sans-font {
+    font-family: "Sofia Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+ header font 
+.roboto-serif-font {
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "GRAD" 0;
+}*/
+
+:root {
+    --color-primary: #ffffff;
+    --color-secondary: #0d0d0d;
+    --color-accent: #eeba30;
+    --ff-header: "Roboto Serif", serif;
+    --ff-content: "Sofia Sans", sans-serif;
+    --h1: normal 54px/64px var(--ff-header);
+    --p: normal 36px/36px var(--ff-header);
+}
+
+body {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+h1 {
+    font: var(--h1);
+}
+
+p {
+    font: var(--p);
+}
+
+.accent {
+    color: var(--color-accent);
+}
