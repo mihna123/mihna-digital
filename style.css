@@ -1,35 +1,19 @@
-/* content font 
-.sofia-sans-font {
-    font-family: "Sofia Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-}
-
- header font 
-.roboto-serif-font {
-    font-family: "Roboto Serif", serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100,
-        "GRAD" 0;
-}*/
-
+/* Clasic setup */
 :root {
     --color-primary: #ffffff;
     --color-secondary: #0d0d0d;
     --color-accent: #eeba30;
     --ff-header: "Roboto Serif", serif;
     --ff-content: "Sofia Sans", sans-serif;
-    --h1: normal 54px/64px var(--ff-header);
-    --p: normal 36px/36px var(--ff-header);
+    --h1: normal 72px/96px var(--ff-header);
+    --p: normal 18px/18px var(--ff-header);
+    --text: normal 18px/18px var(--ff-content);
 }
 
 body {
     background-color: var(--color-secondary);
     color: var(--color-primary);
+    font: var(--p);
 }
 
 h1 {
@@ -40,6 +24,72 @@ p {
     font: var(--p);
 }
 
+logo {
+    padding: 10px;
+}
+
+/* Header stuff */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header * {
+    font: var(--text);
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--color-primary);
+    padding-right: 1.5rem;
+}
+
+header a:hover {
+    color: var(--color-accent)
+}
+
+header li:not(:last-child) a {
+    border-right: 2px solid var(--color-primary);
+}
+
 .accent {
     color: var(--color-accent);
+}
+
+.relative {
+    position: relative;
+}
+
+.-z-100 {
+    z-index: -100;
+}
+
+.z-100 {
+    z-index: 100;
+}
+
+/* Earth stuff */
+div:has(img.earth) {
+    text-align: center;
+    width: fit-content;
+}
+
+div:has(img.earth) h1 {
+    width: 500px;
+}
+
+img.earth {
+    position: absolute;
+    top: -70px;
+    left: 30px;
+    width: 450px;
+    height: 450px;
 }
