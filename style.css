@@ -60,6 +60,22 @@ header li:not(:last-child) a {
     border-right: 2px solid var(--color-primary);
 }
 
+.flex {
+    display: flex;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
 .accent {
     color: var(--color-accent);
 }
@@ -76,6 +92,7 @@ header li:not(:last-child) a {
     z-index: 100;
 }
 
+
 /* Earth stuff */
 div:has(img.earth) {
     text-align: center;
@@ -86,9 +103,15 @@ div:has(img.earth) h1 {
     width: 500px;
 }
 
+div:has(img.earth) h1>span {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 img.earth {
     position: absolute;
-    top: -70px;
+    top: -10px;
     left: 30px;
     width: 450px;
     height: 450px;
