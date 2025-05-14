@@ -48,6 +48,7 @@ header ul {
 
 header a {
     text-decoration: none;
+    white-space: nowrap;
     color: var(--color-primary);
     padding-right: 1.5rem;
 }
