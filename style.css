@@ -5,9 +5,9 @@
     --color-accent: #eeba30;
     --ff-header: "Roboto Serif", serif;
     --ff-content: "Sofia Sans", sans-serif;
-    --h1: normal 72px/96px var(--ff-header);
-    --p: normal 18px/18px var(--ff-header);
-    --text: normal 18px/18px var(--ff-content);
+    --h1: normal 72px / 96px var(--ff-header);
+    --p: normal 18px / 18px var(--ff-header);
+    --text: normal 18px / 18px var(--ff-content);
 }
 
 body {
@@ -53,7 +53,7 @@ header a {
 }
 
 header a:hover {
-    color: var(--color-accent)
+    color: var(--color-accent);
 }
 
 header li:not(:last-child) a {
@@ -84,6 +84,10 @@ header li:not(:last-child) a {
     position: relative;
 }
 
+.absolute {
+    position: absolute;
+}
+
 .-z-100 {
     z-index: -100;
 }
@@ -92,8 +96,8 @@ header li:not(:last-child) a {
     z-index: 100;
 }
 
-
 /* Earth stuff */
+
 div:has(img.earth) {
     text-align: center;
     width: fit-content;
@@ -111,8 +115,8 @@ div:has(img.earth) h1>span {
 
 img.earth {
     position: absolute;
-    top: -10px;
-    left: 30px;
-    width: 450px;
-    height: 450px;
+    top: -30px;
+    left: 0;
+    width: 500px;
+    height: 500px;
 }
