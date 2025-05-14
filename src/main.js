@@ -19,3 +19,5 @@ const earthImg = document.querySelector("img.earth");
 setInterval(() => {
 	earthImg.src = `images/earth/0${(getNumFromSrc(earthImg.src) % 7) + 1}.png`;
 }, 500);
+
+// tilt the backgrounds
