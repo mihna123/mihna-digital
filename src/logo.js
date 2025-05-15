@@ -306,7 +306,6 @@ export const logo = `
       <g
          id="g145271">
         <g
-           aria-label="mihna"
            transform="matrix(0.96154091,0,0,0.96154091,100.37863,-144.17423)"
            id="text145235"
            style="font-weight:bold;font-size:40px;line-height:1.25;font-family:'Noto Serif CJK HK';-inkscape-font-specification:'Noto Serif CJK HK, Bold';white-space:pre;shape-inside:url(#rect145243);fill:#ffffff">
@@ -327,7 +326,6 @@ export const logo = `
              id="path952" />
         </g>
         <g
-           aria-label="Digital"
            transform="matrix(1.0286964,0,0,0.97210412,-4.821074,-47.087666)"
            id="text145241"
            style="font-size:46.2263px;line-height:1.25;font-family:OpenDyslexicMono;-inkscape-font-specification:'OpenDyslexicMono, Normal';fill:#eeba30;stroke-width:1.15567">
