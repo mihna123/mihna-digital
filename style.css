@@ -26,7 +26,7 @@ p {
 }
 
 logo {
-    padding: 10px;
+    margin-top: 10px;
 }
 
 a {
@@ -34,6 +34,17 @@ a {
 }
 
 /* animations */
+@keyframes astronaut {
+    from {
+        translate: 0px -20px;
+        rotate: 0deg;
+    }
+
+    to {
+        translate: 0px 20px;
+        rotate: 359deg;
+    }
+}
 
 @keyframes bounce {
     from {
@@ -124,6 +135,42 @@ img.rocket {
     top: 100px;
     transform: rotate(45deg);
     animation: 1.5s infinite alternate bounce ease-in-out;
+}
+
+/* rest of the planets and objects*/
+
+div.planets>img[alt="Astronaut"] {
+    right: 40%;
+    top: 80%;
+    animation: 5s infinite alternate astronaut ease-in-out;
+}
+
+div.planets>img[alt="Planet Pluto"] {
+    top: 40%;
+    right: 20%;
+    animation: 3s infinite alternate bounce ease-in-out;
+    opacity: 0.4;
+}
+
+div.planets>img[alt="Planet Saturn"] {
+    left: 5%;
+    top: 18%;
+    animation: 2s infinite alternate bounce ease-in-out;
+    opacity: 0.5;
+}
+
+div.planets>img[alt="Planet Neptune"] {
+    right: 8%;
+    top: 85%;
+    animation: 2.5s infinite alternate bounce ease-in-out;
+    opacity: 0.5;
+}
+
+div.planets>img[alt="Planet Venera"] {
+    left: 8%;
+    top: 80%;
+    animation: 3.2s infinite alternate bounce ease-in-out;
+    opacity: 0.4;
 }
 
 /* utility classes */
