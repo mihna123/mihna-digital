@@ -33,6 +33,14 @@ a {
     text-decoration: none;
 }
 
+section {
+    margin-bottom: 200px;
+}
+
+section>p {
+    font: var(--text);
+}
+
 /* animations */
 @keyframes astronaut {
     from {
@@ -42,7 +50,17 @@ a {
 
     to {
         translate: 0px 20px;
-        rotate: 359deg;
+        rotate: 360deg;
+    }
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
     }
 }
 
@@ -141,12 +159,12 @@ img.rocket {
 
 div.planets>img[alt="Astronaut"] {
     right: 40%;
-    top: 80%;
+    top: 35rem;
     animation: 5s infinite alternate astronaut ease-in-out;
 }
 
 div.planets>img[alt="Planet Pluto"] {
-    top: 40%;
+    top: 20rem;
     right: 20%;
     animation: 3s infinite alternate bounce ease-in-out;
     opacity: 0.4;
@@ -154,23 +172,45 @@ div.planets>img[alt="Planet Pluto"] {
 
 div.planets>img[alt="Planet Saturn"] {
     left: 5%;
-    top: 18%;
+    top: 10rem;
     animation: 2s infinite alternate bounce ease-in-out;
     opacity: 0.5;
 }
 
 div.planets>img[alt="Planet Neptune"] {
     right: 8%;
-    top: 85%;
+    top: 30rem;
     animation: 2.5s infinite alternate bounce ease-in-out;
     opacity: 0.5;
 }
 
 div.planets>img[alt="Planet Venera"] {
     left: 8%;
-    top: 80%;
+    top: 35rem;
     animation: 3.2s infinite alternate bounce ease-in-out;
     opacity: 0.4;
+}
+
+/* rest of the sections */
+
+#hajde-da-zajedno-radimo {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+#hajde-da-zajedno-radimo img[alt="Planet Saturn"] {
+    rotate: 60deg;
+    left: 30%;
+}
+
+#hajde-da-zajedno-radimo img[alt="Astronaut"] {
+    right: 10%;
+    animation: 30s rotate linear infinite;
+}
+
+#hajde-da-zajedno-radimo img[alt="Rocket"] {
+    right: 20%;
+    animation: 120s rotate reverse linear infinite;
 }
 
 /* utility classes */
@@ -178,6 +218,11 @@ div.planets>img[alt="Planet Venera"] {
 .text-lg {
     font-size: 2rem;
     line-height: 3rem;
+}
+
+.text-sm {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
 }
 
 .flex {
@@ -202,6 +247,29 @@ div.planets>img[alt="Planet Venera"] {
 
 .accent {
     color: var(--color-accent);
+}
+
+.max-w-900 {
+    max-width: 900px;
+}
+
+.max-w-800 {
+    max-width: 800px;
+}
+
+.max-w-700 {
+    max-width: 700px;
+}
+
+.max-w-600 {
+    max-width: 600px;
+}
+
+.highlight {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: default;
 }
 
 .relative {

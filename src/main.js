@@ -1,8 +1,10 @@
 import { logo } from "./logo.js";
 
-// load the logo
+// load the logos
 
-document.querySelector("logo").innerHTML = logo;
+for (const l of document.querySelectorAll("logo")) {
+	l.innerHTML = logo;
+}
 
 // spin the earth
 
