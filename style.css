@@ -11,6 +11,11 @@
 	--text: normal 18px / 18px var(--ff-content);
 }
 
+html,
+body {
+	overflow-x: hidden;
+}
+
 body {
 	background-color: var(--color-secondary);
 	color: var(--color-primary);
