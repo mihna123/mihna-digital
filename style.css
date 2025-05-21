@@ -220,11 +220,13 @@ div.planets>img[alt="Planet Venera"] {
 
 #zasto-mozete-da-nam-verujete img[alt="Astronaut"] {
     left: 25%;
+    bottom: 300px;
     animation: 30s rotate linear infinite;
 }
 
 #zasto-mozete-da-nam-verujete img[alt="Rocket"] {
     left: 15%;
+    bottom: 50px;
     animation: 120s rotate reverse linear infinite;
 }
 
@@ -243,6 +245,10 @@ div.planets>img[alt="Planet Venera"] {
 .text-sm {
     font-size: 1.5rem !important;
     line-height: 2.5rem !important;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .text {
