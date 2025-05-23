@@ -22,4 +22,17 @@ setInterval(() => {
 	earthImg.src = `images/earth/0${(getNumFromSrc(earthImg.src) % 7) + 1}.png`;
 }, 500);
 
-// tilt the backgrounds
+// mobile menu functionality
+
+/** @type {HTMLButtonElement} */
+const openMenuBtn = document.querySelector("header>button");
+/** @type {HTMLUListElement} */
+const mobileMenu = document.querySelector("header>ul.mobile");
+openMenuBtn.onclick = () => {
+	mobileMenu.classList.toggle("hidden");
+	if (mobileMenu.classList.contains("hidden")) {
+		openMenuBtn.innerHTML = "Open menu";
+	} else {
+		openMenuBtn.innerHTML = "Close menu";
+	}
+};

@@ -7,51 +7,9 @@
     --ff-header: "Roboto Serif", serif;
     --ff-content: "Sofia Sans", sans-serif;
     --h1: normal 56px / 72px var(--ff-header);
+    --h1-mobile: normal 32px / 48px var(--ff-header);
     --p: normal 18px / 48px var(--ff-header);
     --text: normal 18px / 18px var(--ff-content);
-}
-
-html {
-    scroll-snap-type: y mandatory;
-}
-
-html,
-body {
-    overflow-x: hidden;
-}
-
-body {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-    font: var(--p);
-    margin: 0;
-}
-
-h1 {
-    font: var(--h1);
-}
-
-p {
-    font: var(--p);
-}
-
-logo {
-    margin-top: 10px;
-}
-
-a {
-    text-decoration: none;
-}
-
-section {
-    margin-bottom: 200px;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    scroll-snap-align: start;
-}
-
-section>p {
-    font: var(--text);
 }
 
 /* animations */
@@ -87,6 +45,38 @@ section>p {
     }
 }
 
+html {
+    scroll-snap-type: y mandatory;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    font: var(--p);
+    margin: 0;
+}
+
+h1 {
+    font: var(--h1);
+}
+
+p {
+    font: var(--p);
+}
+
+logo {
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
 /* header stuff */
 
 header {
@@ -117,18 +107,16 @@ header a:hover {
     color: var(--color-accent);
 }
 
-header li:not(:last-child) a {
+header ul:not(.mobile) li:not(:last-child) a {
     border-right: 2px solid var(--color-primary);
 }
 
-/* footer stuff */
-footer {
-    background-color: black;
-    padding: 20px;
+header ul.mobile {
+    flex-direction: column;
 }
 
-footer a {
-    color: var(--color-primary);
+header ul.mobile li:not(:last-child) a {
+    border-bottom: 2px solid var(--color-primary);
 }
 
 /* earth and rocket stuff */
@@ -215,6 +203,27 @@ div.planets>img[alt="Planet Venera"] {
     opacity: 0.4;
 }
 
+section {
+    margin-bottom: 200px;
+    scroll-snap-align: start;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+}
+
+section>p {
+    font: var(--text);
+}
+
+/* footer stuff */
+footer {
+    background-color: black;
+    padding: 20px;
+}
+
+footer a {
+    color: var(--color-primary);
+}
+
 /* rest of the sections */
 
 #hajde-da-zajedno-radimo img[alt="Planet Saturn"] {
@@ -223,17 +232,15 @@ div.planets>img[alt="Planet Venera"] {
 }
 
 #hajde-da-zajedno-radimo img[alt="Astronaut"] {
-    right: 10%;
+    left: 10%;
+    translate: 0 400px;
     animation: 30s rotate linear infinite;
 }
 
 #hajde-da-zajedno-radimo img[alt="Rocket"] {
-    right: 20%;
+    left: 20%;
+    translate: 100px 400px;
     animation: 120s rotate reverse linear infinite;
-}
-
-#zasto-mozete-da-nam-verujete p.accent-bottom {
-    min-height: 10rem;
 }
 
 #zasto-mozete-da-nam-verujete img[alt="Planet Neptune"] {
@@ -242,13 +249,13 @@ div.planets>img[alt="Planet Venera"] {
 
 #zasto-mozete-da-nam-verujete img[alt="Astronaut"] {
     left: 25%;
-    bottom: 300px;
+    bottom: 850px;
     animation: 30s rotate linear infinite;
 }
 
 #zasto-mozete-da-nam-verujete img[alt="Rocket"] {
     left: 15%;
-    bottom: 50px;
+    bottom: 650px;
     animation: 120s rotate reverse linear infinite;
 }
 
@@ -257,19 +264,20 @@ div.planets>img[alt="Planet Venera"] {
 }
 
 #cime-se-bavimo img[alt="Blueprint"] {
+    translate: 30% -850px;
     animation: 130s rotate linear infinite;
 }
 
 #cime-se-bavimo img[alt="Hammer"] {
     left: 55%;
-    translate: 0 100px;
+    translate: 0 -400px;
     animation: 90s rotate reverse linear infinite;
 }
 
 #cime-se-bavimo img[alt="Microscope"] {
     right: 10%;
     animation: 100s rotate linear infinite;
-    translate: 0 100px;
+    translate: 0 -100px;
 }
 
 #otkricemo-vam-tajnu img[alt="Planet Pluto"] {
@@ -289,7 +297,116 @@ div.planets>img[alt="Planet Venera"] {
     translate: 0 -260px;
 }
 
+@media screen and (min-width: 550px) {
+    header>button {
+        display: none;
+    }
+
+    section {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    /* rest of the sections */
+
+    #hajde-da-zajedno-radimo img[alt="Planet Saturn"] {
+        rotate: 60deg;
+        left: 30%;
+    }
+
+    #hajde-da-zajedno-radimo img[alt="Astronaut"] {
+        right: 10%;
+        animation: 30s rotate linear infinite;
+    }
+
+    #hajde-da-zajedno-radimo img[alt="Rocket"] {
+        right: 20%;
+        animation: 120s rotate reverse linear infinite;
+    }
+
+    #zasto-mozete-da-nam-verujete p.accent-bottom {
+        min-height: 8rem;
+    }
+
+    #zasto-mozete-da-nam-verujete img[alt="Planet Neptune"] {
+        right: -100px;
+    }
+
+    #zasto-mozete-da-nam-verujete img[alt="Astronaut"] {
+        left: 25%;
+        bottom: 300px;
+        animation: 30s rotate linear infinite;
+    }
+
+    #zasto-mozete-da-nam-verujete img[alt="Rocket"] {
+        left: 15%;
+        bottom: 50px;
+        animation: 120s rotate reverse linear infinite;
+    }
+
+    #cime-se-bavimo div:has(img[alt="Blueprint"]) {
+        translate: -30px -250px;
+    }
+
+    #cime-se-bavimo img[alt="Blueprint"] {
+        translate: 0 0;
+        animation: 130s rotate linear infinite;
+    }
+
+    #cime-se-bavimo img[alt="Hammer"] {
+        left: 55%;
+        translate: 0 100px;
+        animation: 90s rotate reverse linear infinite;
+    }
+
+    #cime-se-bavimo img[alt="Microscope"] {
+        right: 10%;
+        animation: 100s rotate linear infinite;
+        translate: 0 100px;
+    }
+
+    /* utility classes */
+    .text-sm {
+        font-size: 1.5rem !important;
+        line-height: 2.5rem !important;
+    }
+
+    .text-lg {
+        font-size: 2rem !important;
+        line-height: 3rem !important;
+    }
+
+    .btn-primary {
+        color: var(--color-secondary);
+        background-color: var(--color-accent);
+        padding: 20px 40px;
+        cursor: pointer;
+        font: var(--text);
+        border: none;
+        transition: all 0.2s ease;
+    }
+}
+
+/* mobile style */
+@media screen and (max-width: 549px) {
+    header>ul:not(.mobile) {
+        display: none;
+    }
+
+    section:not(:has(div.planets)) h1 {
+        font: var(--h1-mobile);
+    }
+
+    #cime-se-bavimo div.flex>div {
+        width: 100%;
+    }
+}
+
 /* utility classes */
+
+.hidden {
+    display: none;
+}
 
 .text-xl {
     font-size: 1.7rem !important;
@@ -297,12 +414,12 @@ div.planets>img[alt="Planet Venera"] {
 }
 
 .text-lg {
-    font-size: 2rem !important;
-    line-height: 3rem !important;
+    font-size: 1.5rem !important;
+    line-height: 2.6rem !important;
 }
 
 .text-sm {
-    font-size: 1.5rem !important;
+    font-size: 1.3rem !important;
     line-height: 2.5rem !important;
 }
 
@@ -316,6 +433,10 @@ div.planets>img[alt="Planet Venera"] {
 
 .flex {
     display: flex;
+}
+
+.wrap {
+    flex-wrap: wrap;
 }
 
 .gap-1 {
@@ -387,6 +508,10 @@ div.planets>img[alt="Planet Venera"] {
     max-width: 400px;
 }
 
+.max-w-350 {
+    max-width: 350px;
+}
+
 .highlight {
     background-color: rgba(0, 0, 0, 0.9);
     padding-left: 10px;
@@ -410,6 +535,10 @@ div.planets>img[alt="Planet Venera"] {
     z-index: 100;
 }
 
+.whitespace-nowrap {
+    white-space: nowrap;
+}
+
 /* buttons */
 
 .btn-primary {
@@ -418,6 +547,7 @@ div.planets>img[alt="Planet Venera"] {
     padding: 20px 40px;
     cursor: pointer;
     font: var(--text);
+    font-size: 1rem;
     border: none;
     transition: all 0.2s ease;
 }
