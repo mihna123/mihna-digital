@@ -28,11 +28,20 @@ setInterval(() => {
 const openMenuBtn = document.querySelector("header>button");
 /** @type {HTMLUListElement} */
 const mobileMenu = document.querySelector("header>ul.mobile");
+/**
+ * @param {MouseEvent} e
+ * */
+function handleOutsideClick(e) {
+	/** @type {HTMLElement} */
+	const target = e.target;
+	if (!target.isSameNode(mobileMenu)) {
+		mobileMenu.classList.add("hidden");
+		document.removeEventListener("click", handleOutsideClick);
+	}
+}
 openMenuBtn.onclick = () => {
 	mobileMenu.classList.toggle("hidden");
-	if (mobileMenu.classList.contains("hidden")) {
-		openMenuBtn.innerHTML = "Open menu";
-	} else {
-		openMenuBtn.innerHTML = "Close menu";
-	}
+	setTimeout(() => document.addEventListener("click", handleOutsideClick), 10);
 };
+
+/// TODO: make the menu slide in with animations.
