@@ -35,13 +35,11 @@ function handleOutsideClick(e) {
 	/** @type {HTMLElement} */
 	const target = e.target;
 	if (!target.isSameNode(mobileMenu)) {
-		mobileMenu.classList.add("hidden");
+		mobileMenu.classList.add("hide-to-right");
 		document.removeEventListener("click", handleOutsideClick);
 	}
 }
 openMenuBtn.onclick = () => {
-	mobileMenu.classList.toggle("hidden");
+	mobileMenu.classList.toggle("hide-to-right");
 	setTimeout(() => document.addEventListener("click", handleOutsideClick), 10);
 };
-
-/// TODO: make the menu slide in with animations.

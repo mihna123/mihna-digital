@@ -117,6 +117,7 @@ header ul.mobile {
     top: 0;
     right: 0;
     padding: 20px;
+    transition: all 0.15s ease;
 }
 
 header ul.mobile li {
@@ -419,6 +420,10 @@ footer a {
 
 .hidden {
     display: none;
+}
+
+.hide-to-right {
+    translate: 100% 0;
 }
 
 .text-xl {
