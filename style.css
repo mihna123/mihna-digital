@@ -103,6 +103,12 @@ header a {
     padding-right: 1.5rem;
 }
 
+header>button {
+    background-color: transparent;
+    border: none;
+    color: var(--color-primary);
+}
+
 header a:hover {
     color: var(--color-accent);
 }

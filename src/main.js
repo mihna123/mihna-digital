@@ -1,10 +1,13 @@
-import { logo } from "./logo.js";
+import { logoSVG } from "./logo.js";
+import { menuSVG } from "./menu.js";
 
-// load the logos
+// load the svgs
 
 for (const l of document.querySelectorAll("logo")) {
-	l.innerHTML = logo;
+	l.innerHTML = logoSVG;
 }
+
+document.querySelector("header>button").innerHTML = menuSVG;
 
 // spin the earth
 

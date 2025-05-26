@@ -1,4 +1,4 @@
-export const logo = `
+export const logoSVG = `
     <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg
    width="114px"
